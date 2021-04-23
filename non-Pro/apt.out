@@ -1,0 +1,12 @@
+Package: rocm-libs
+Version: 4.1.0.40100-26
+Priority: optional
+Section: devel
+Maintainer: Advanced Micro Devices, Inc.
+Installed-Size: 13,3 kB
+Depends: hipblas, hipcub, hipfft, hipsparse, miopen-hip, rccl, rocalution, rocblas, rocfft, rocprim, rocrand, rocsolver, rocsparse, rocthrust
+Homepage: https://github.com/RadeonOpenCompute/ROCm
+Download-Size: 834 B
+APT-Sources: https://repo.radeon.com/rocm/apt/debian xenial/main amd64 Packages
+Description: Radeon Open Compute (ROCm) Runtime software stack
+
