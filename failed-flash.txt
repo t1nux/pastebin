@@ -1,0 +1,222 @@
+nRF Connect, 2022-02-22
+RuuviBoot (D4:B7:90:09:CB:65)
+V	11:51:41.989	Connecting to D4:B7:90:09:CB:65...
+D	11:51:41.989	gatt = device.connectGatt(autoConnect = false, TRANSPORT_LE, preferred PHY = LE 1M)
+D	11:51:42.167	[Broadcast] Action received: android.bluetooth.device.action.ACL_CONNECTED
+D	11:51:42.175	[Callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	11:51:42.176	Connected to D4:B7:90:09:CB:65
+V	11:51:42.183	Discovering services...
+D	11:51:42.183	gatt.discoverServices()
+I	11:51:42.780	Connection parameters updated (interval: 22.5ms, latency: 0, timeout: 4000ms)
+D	11:51:42.985	[Callback] Services discovered with status: 0
+I	11:51:42.985	Services discovered
+V	11:51:42.990	Generic Access (0x1800)
+- Device Name [R W] (0x2A00)
+- Appearance [R] (0x2A01)
+- Peripheral Preferred Connection Parameters [R] (0x2A04)
+- Central Address Resolution [R] (0x2AA6)
+Generic Attribute (0x1801)
+Secure DFU Service (0xFE59)
+- DFU Packet [WNR] (8ec90002-f315-4f60-9fb8-838830daea50)
+- DFU Control Point [N W] (8ec90001-f315-4f60-9fb8-838830daea50)
+   Client Characteristic Configuration (0x2902)
+I	11:51:43.006	Connection parameters updated (interval: 7.5ms, latency: 0, timeout: 5000ms)
+I	11:51:43.096	Connection parameters updated (interval: 22.5ms, latency: 0, timeout: 4000ms)
+I	11:51:43.726	Connection parameters updated (interval: 22.5ms, latency: 0, timeout: 4000ms)
+V	11:51:47.950	[DFU] DFU service started
+V	11:51:47.950	[DFU] Opening file...
+I	11:51:47.966	[DFU] Firmware file opened successfully
+V	11:51:47.967	[DFU] Connecting to DFU target...
+D	11:51:47.968	[DFU] gatt = device.connectGatt(autoConnect = false, TRANSPORT_LE, preferredPhy = LE_1M | LE_2M)
+I	11:51:47.978	[DFU] Connected to D4:B7:90:09:CB:65
+V	11:51:47.979	[DFU] Discovering services...
+D	11:51:47.979	[DFU] gatt.discoverServices()
+I	11:51:47.980	[DFU] Services discovered
+W	11:51:47.981	[DFU] Sending system components
+D	11:51:47.985	[DFU] wait(1000)
+V	11:51:48.986	[DFU] Requesting new MTU...
+D	11:51:48.986	[DFU] gatt.requestMtu(517)
+I	11:51:49.034	[DFU] MTU changed to: 23
+V	11:51:49.037	[DFU] Enabling notifications for 8ec90001-f315-4f60-9fb8-838830daea50
+D	11:51:49.037	[DFU] gatt.setCharacteristicNotification(8ec90001-f315-4f60-9fb8-838830daea50, true)
+D	11:51:49.038	[DFU] gatt.writeDescriptor(00002902-0000-1000-8000-00805f9b34fb, value=0x01-00)
+I	11:51:49.079	[DFU] Data written to descr.8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 01-00
+V	11:51:49.079	[DFU] Notifications enabled for 8ec90001-f315-4f60-9fb8-838830daea50
+A	11:51:49.079	[DFU] Notifications enabled
+D	11:51:49.079	[DFU] wait(1000)
+V	11:51:50.081	[DFU] Writing to characteristic 8ec90001-f315-4f60-9fb8-838830daea50
+D	11:51:50.081	[DFU] gatt.writeCharacteristic(8ec90001-f315-4f60-9fb8-838830daea50)
+I	11:51:50.114	[DFU] Data written to 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 06-01
+I	11:51:50.114	[DFU] Notification received from 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 60-06-01-00-01-00-00-9A-00-00-00-70-54-EA-67
+A	11:51:50.114	[DFU] Command object info received (Max size = 256, Offset = 154, CRC = 67EA5470)
+A	11:51:50.115	[DFU] Received CRC match Init packet
+V	11:51:50.115	[DFU] Writing to characteristic 8ec90001-f315-4f60-9fb8-838830daea50
+D	11:51:50.115	[DFU] gatt.writeCharacteristic(8ec90001-f315-4f60-9fb8-838830daea50)
+I	11:51:50.159	[DFU] Data written to 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 04
+I	11:51:50.159	[DFU] Notification received from 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 60-04-01
+A	11:51:50.159	[DFU] Command object executed
+V	11:51:50.160	[DFU] Writing to characteristic 8ec90001-f315-4f60-9fb8-838830daea50
+D	11:51:50.160	[DFU] gatt.writeCharacteristic(8ec90001-f315-4f60-9fb8-838830daea50)
+I	11:51:50.203	[DFU] Data written to 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 06-02
+I	11:51:50.204	[DFU] Notification received from 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 60-06-01-00-10-00-00-00-10-00-00-F0-E1-6F-08
+A	11:51:50.204	[DFU] Data object info received (Max size = 4096, Offset = 4096, CRC = 086FE1F0)
+A	11:51:50.204	[DFU] 4096 bytes of data sent before, CRC match
+V	11:51:50.224	[DFU] Writing to characteristic 8ec90001-f315-4f60-9fb8-838830daea50
+D	11:51:50.224	[DFU] gatt.writeCharacteristic(8ec90001-f315-4f60-9fb8-838830daea50)
+I	11:51:50.248	[DFU] Data written to 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 04
+I	11:51:50.249	[DFU] Notification received from 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 60-04-01
+A	11:51:50.249	[DFU] Data object executed
+V	11:51:50.249	[DFU] Writing to characteristic 8ec90001-f315-4f60-9fb8-838830daea50
+D	11:51:50.249	[DFU] gatt.writeCharacteristic(8ec90001-f315-4f60-9fb8-838830daea50)
+I	11:51:50.298	[DFU] Data written to 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 01-02-00-10-00-00
+I	11:51:50.298	[DFU] Notification received from 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 60-01-01
+A	11:51:50.298	[DFU] Data object (2/42) created
+D	11:51:50.298	[DFU] wait(400)
+A	11:51:50.700	[DFU] Uploading firmware...
+V	11:51:50.700	[DFU] Sending firmware to characteristic 8ec90002-f315-4f60-9fb8-838830daea50...
+D	11:51:54.324	[Callback] Connection state changed with status: 8 and new state: DISCONNECTED (0)
+E	11:51:54.324	Error 8 (0x8): GATT CONN TIMEOUT
+I	11:51:54.324	Disconnected
+E	11:51:54.340	[DFU] Device has disconnected
+D	11:51:54.340	[DFU] gatt.disconnect()
+D	11:51:54.340	[DFU] gatt.close()
+D	11:51:54.341	[Broadcast] Action received: android.bluetooth.device.action.ACL_DISCONNECTED
+D	11:51:54.353	[DFU] [Broadcast] Action received: android.bluetooth.device.action.ACL_DISCONNECTED
+V	11:51:54.369	[DFU] DFU service started
+I	11:51:54.369	[DFU] Firmware file opened successfully
+D	11:51:54.369	[DFU] wait(1000)
+D	11:51:55.364	[DFU] wait(1000)
+V	11:51:56.372	[DFU] Connecting to DFU target...
+D	11:51:56.394	[DFU] gatt = device.connectGatt(autoConnect = false, TRANSPORT_LE, preferredPhy = LE_1M | LE_2M)
+D	11:51:56.570	[Broadcast] Action received: android.bluetooth.device.action.ACL_CONNECTED
+D	11:51:56.570	[DFU] [Broadcast] Action received: android.bluetooth.device.action.ACL_CONNECTED
+I	11:51:56.595	[DFU] Connected to D4:B7:90:09:CB:65
+V	11:51:56.595	[DFU] Discovering services...
+D	11:51:56.595	[DFU] gatt.discoverServices()
+I	11:51:57.389	[DFU] Services discovered
+W	11:51:57.389	[DFU] Sending system components
+D	11:51:57.398	[DFU] wait(1000)
+V	11:51:58.395	[DFU] Requesting new MTU...
+D	11:51:58.395	[DFU] gatt.requestMtu(517)
+I	11:51:58.438	[DFU] MTU changed to: 23
+V	11:51:58.443	[DFU] Enabling notifications for 8ec90001-f315-4f60-9fb8-838830daea50
+D	11:51:58.444	[DFU] gatt.setCharacteristicNotification(8ec90001-f315-4f60-9fb8-838830daea50, true)
+D	11:51:58.446	[DFU] gatt.writeDescriptor(00002902-0000-1000-8000-00805f9b34fb, value=0x01-00)
+I	11:51:58.486	[DFU] Data written to descr.8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 01-00
+V	11:51:58.486	[DFU] Notifications enabled for 8ec90001-f315-4f60-9fb8-838830daea50
+A	11:51:58.487	[DFU] Notifications enabled
+D	11:51:58.487	[DFU] wait(1000)
+V	11:51:59.489	[DFU] Writing to characteristic 8ec90001-f315-4f60-9fb8-838830daea50
+D	11:51:59.490	[DFU] gatt.writeCharacteristic(8ec90001-f315-4f60-9fb8-838830daea50)
+I	11:51:59.541	[DFU] Data written to 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 06-01
+I	11:51:59.541	[DFU] Notification received from 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 60-06-01-00-01-00-00-9A-00-00-00-70-54-EA-67
+A	11:51:59.542	[DFU] Command object info received (Max size = 256, Offset = 154, CRC = 67EA5470)
+A	11:51:59.542	[DFU] Received CRC match Init packet
+V	11:51:59.542	[DFU] Writing to characteristic 8ec90001-f315-4f60-9fb8-838830daea50
+D	11:51:59.542	[DFU] gatt.writeCharacteristic(8ec90001-f315-4f60-9fb8-838830daea50)
+I	11:51:59.587	[DFU] Data written to 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 04
+I	11:51:59.587	[DFU] Notification received from 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 60-04-01
+A	11:51:59.587	[DFU] Command object executed
+V	11:51:59.587	[DFU] Writing to characteristic 8ec90001-f315-4f60-9fb8-838830daea50
+D	11:51:59.587	[DFU] gatt.writeCharacteristic(8ec90001-f315-4f60-9fb8-838830daea50)
+I	11:51:59.632	[DFU] Data written to 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 06-02
+I	11:51:59.632	[DFU] Notification received from 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 60-06-01-00-10-00-00-00-10-00-00-F0-E1-6F-08
+A	11:51:59.632	[DFU] Data object info received (Max size = 4096, Offset = 4096, CRC = 086FE1F0)
+A	11:51:59.632	[DFU] 4096 bytes of data sent before, CRC match
+V	11:51:59.652	[DFU] Writing to characteristic 8ec90001-f315-4f60-9fb8-838830daea50
+D	11:51:59.652	[DFU] gatt.writeCharacteristic(8ec90001-f315-4f60-9fb8-838830daea50)
+I	11:51:59.676	[DFU] Data written to 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 04
+I	11:51:59.676	[DFU] Notification received from 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 60-04-08
+A	11:51:59.679	[DFU] Data object already executed
+V	11:51:59.679	[DFU] Writing to characteristic 8ec90001-f315-4f60-9fb8-838830daea50
+D	11:51:59.679	[DFU] gatt.writeCharacteristic(8ec90001-f315-4f60-9fb8-838830daea50)
+I	11:51:59.723	[DFU] Data written to 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 01-02-00-10-00-00
+E	11:52:03.825	[DFU] Device has disconnected
+D	11:52:03.825	[DFU] gatt.disconnect()
+D	11:52:03.826	[DFU] gatt.close()
+D	11:52:03.831	[DFU] [Broadcast] Action received: android.bluetooth.device.action.ACL_DISCONNECTED
+D	11:52:03.831	[Broadcast] Action received: android.bluetooth.device.action.ACL_DISCONNECTED
+V	11:52:03.871	[DFU] DFU service started
+I	11:52:03.871	[DFU] Firmware file opened successfully
+D	11:52:03.871	[DFU] wait(1000)
+D	11:52:04.882	[DFU] wait(1000)
+V	11:52:05.876	[DFU] Connecting to DFU target...
+D	11:52:05.912	[DFU] gatt = device.connectGatt(autoConnect = false, TRANSPORT_LE, preferredPhy = LE_1M | LE_2M)
+D	11:52:06.088	[Broadcast] Action received: android.bluetooth.device.action.ACL_CONNECTED
+D	11:52:06.088	[DFU] [Broadcast] Action received: android.bluetooth.device.action.ACL_CONNECTED
+I	11:52:06.097	[DFU] Connected to D4:B7:90:09:CB:65
+V	11:52:06.099	[DFU] Discovering services...
+D	11:52:06.099	[DFU] gatt.discoverServices()
+I	11:52:06.766	[DFU] Services discovered
+W	11:52:06.766	[DFU] Sending system components
+D	11:52:06.789	[DFU] wait(1000)
+V	11:52:07.776	[DFU] Requesting new MTU...
+D	11:52:07.777	[DFU] gatt.requestMtu(517)
+I	11:52:07.820	[DFU] MTU changed to: 23
+V	11:52:07.820	[DFU] Enabling notifications for 8ec90001-f315-4f60-9fb8-838830daea50
+D	11:52:07.820	[DFU] gatt.setCharacteristicNotification(8ec90001-f315-4f60-9fb8-838830daea50, true)
+D	11:52:07.822	[DFU] gatt.writeDescriptor(00002902-0000-1000-8000-00805f9b34fb, value=0x01-00)
+I	11:52:07.866	[DFU] Data written to descr.8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 01-00
+V	11:52:07.866	[DFU] Notifications enabled for 8ec90001-f315-4f60-9fb8-838830daea50
+A	11:52:07.866	[DFU] Notifications enabled
+D	11:52:07.866	[DFU] wait(1000)
+V	11:52:08.867	[DFU] Writing to characteristic 8ec90001-f315-4f60-9fb8-838830daea50
+D	11:52:08.867	[DFU] gatt.writeCharacteristic(8ec90001-f315-4f60-9fb8-838830daea50)
+I	11:52:08.925	[DFU] Data written to 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 06-01
+I	11:52:08.927	[DFU] Notification received from 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 60-06-01-00-01-00-00-9A-00-00-00-70-54-EA-67
+A	11:52:08.927	[DFU] Command object info received (Max size = 256, Offset = 154, CRC = 67EA5470)
+A	11:52:08.927	[DFU] Received CRC match Init packet
+V	11:52:08.928	[DFU] Writing to characteristic 8ec90001-f315-4f60-9fb8-838830daea50
+D	11:52:08.928	[DFU] gatt.writeCharacteristic(8ec90001-f315-4f60-9fb8-838830daea50)
+I	11:52:08.970	[DFU] Data written to 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 04
+I	11:52:08.972	[DFU] Notification received from 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 60-04-01
+A	11:52:08.972	[DFU] Command object executed
+V	11:52:08.972	[DFU] Writing to characteristic 8ec90001-f315-4f60-9fb8-838830daea50
+D	11:52:08.973	[DFU] gatt.writeCharacteristic(8ec90001-f315-4f60-9fb8-838830daea50)
+I	11:52:09.017	[DFU] Data written to 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 06-02
+I	11:52:09.018	[DFU] Notification received from 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 60-06-01-00-10-00-00-00-10-00-00-F0-E1-6F-08
+A	11:52:09.019	[DFU] Data object info received (Max size = 4096, Offset = 4096, CRC = 086FE1F0)
+A	11:52:09.019	[DFU] 4096 bytes of data sent before, CRC match
+V	11:52:09.057	[DFU] Writing to characteristic 8ec90001-f315-4f60-9fb8-838830daea50
+D	11:52:09.057	[DFU] gatt.writeCharacteristic(8ec90001-f315-4f60-9fb8-838830daea50)
+I	11:52:09.082	[DFU] Data written to 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 04
+I	11:52:09.083	[DFU] Notification received from 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 60-04-08
+A	11:52:09.084	[DFU] Data object already executed
+V	11:52:09.084	[DFU] Writing to characteristic 8ec90001-f315-4f60-9fb8-838830daea50
+D	11:52:09.084	[DFU] gatt.writeCharacteristic(8ec90001-f315-4f60-9fb8-838830daea50)
+I	11:52:09.128	[DFU] Data written to 8ec90001-f315-4f60-9fb8-838830daea50, value (0x): 01-02-00-10-00-00
+E	11:52:13.232	[DFU] Device has disconnected
+D	11:52:13.233	[DFU] gatt.disconnect()
+D	11:52:13.235	[DFU] gatt.close()
+D	11:52:13.238	gatt.close()
+D	11:52:13.239	wait(200)
+V	11:52:13.443	Connecting to D4:B7:90:09:CB:65...
+D	11:52:13.443	gatt = device.connectGatt(autoConnect = false, TRANSPORT_LE, preferred PHY = LE 1M)
+D	11:52:13.455	[Broadcast] Action received: android.bluetooth.device.action.ACL_DISCONNECTED
+I	11:52:13.468	Disconnected
+D	11:52:13.657	[Broadcast] Action received: android.bluetooth.device.action.ACL_CONNECTED
+D	11:52:13.657	gatt.close()
+D	11:52:13.665	wait(200)
+V	11:52:13.868	Connecting to D4:B7:90:09:CB:65...
+D	11:52:13.868	gatt = device.connectGatt(autoConnect = false, TRANSPORT_LE, preferred PHY = LE 1M)
+D	11:52:13.882	[Callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	11:52:13.882	Connected to D4:B7:90:09:CB:65
+D	11:52:13.888	[Callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+V	11:52:13.891	Discovering services...
+D	11:52:13.891	gatt.discoverServices()
+I	11:52:14.032	Connection parameters updated (interval: 22.5ms, latency: 0, timeout: 4000ms)
+I	11:52:14.260	Connection parameters updated (interval: 7.5ms, latency: 0, timeout: 5000ms)
+D	11:52:14.317	[Callback] Services discovered with status: 0
+I	11:52:14.317	Services discovered
+V	11:52:14.321	Generic Access (0x1800)
+- Device Name [R W] (0x2A00)
+- Appearance [R] (0x2A01)
+- Peripheral Preferred Connection Parameters [R] (0x2A04)
+- Central Address Resolution [R] (0x2AA6)
+Generic Attribute (0x1801)
+Secure DFU Service (0xFE59)
+- DFU Packet [WNR] (8ec90002-f315-4f60-9fb8-838830daea50)
+- DFU Control Point [N W] (8ec90001-f315-4f60-9fb8-838830daea50)
+   Client Characteristic Configuration (0x2902)
+I	11:52:14.394	Connection parameters updated (interval: 22.5ms, latency: 0, timeout: 4000ms)
+I	11:52:14.984	Connection parameters updated (interval: 22.5ms, latency: 0, timeout: 4000ms)
